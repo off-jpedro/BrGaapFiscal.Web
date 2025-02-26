@@ -51,6 +51,16 @@
                 "settings": {
                     "bundleName": "brgaapfiscal.web.i18n.i18n"
                 }
+            },
+            "notaFiscalModel": {
+                "type": "sap.ui.model.json.JSONModel",
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "request": {
+                        "url": "http://localhost:5136/api/NotaFiscal",
+                        "method": "GET"
+                    }
+                }
             }
         },
         "resources": {
