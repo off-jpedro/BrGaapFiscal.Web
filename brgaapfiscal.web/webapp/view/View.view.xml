@@ -1,0 +1,37 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    controllerName="brgaapfiscal.web.controller.View">
+
+    <VBox id="notaFiscalVBox">
+        <Toolbar id="notaFiscalToolbar">
+            <Title id="tituloNotaFiscal" text="Listagem de Notas Fiscais" />
+            <ToolbarSpacer id="toolbarSpacer" />
+            <Button id="btnAdicionar" text="Adicionar" press="onAdd" />
+        </Toolbar>
+        <Table id="notaFiscalTable" items="{path: '/notasFiscais'}">
+            <columns>
+                <Column id="colNumero"><Text id="txtColNumero" text="Número" /></Column>
+                <Column id="colValor"><Text id="txtColValor" text="Valor" /></Column>
+                <Column id="colCliente"><Text id="txtColCliente" text="Cliente" /></Column>
+                <Column id="colFornecedor"><Text id="txtColFornecedor" text="Fornecedor" /></Column>
+                <Column id="colAcoes"><Text id="txtColAcoes" text="Ações" /></Column>
+            </columns>
+            <items>
+                <ColumnListItem id="itemNotaFiscal">
+                    <cells>
+                        <Text id="txtNumeroNota" text="{numeroNota}" />
+                        <Text id="txtValorNota" text="{valorNota}" />
+                        <Text id="txtClienteNome" text="{cliente/nome}" />
+                        <Text id="txtFornecedorNome" text="{fornecedor/nome}" />
+                        <HBox id="hboxAcoes">
+                            <Button id="btnEditar" text="Editar" press="onEdit" />
+                            <Button id="btnRemover" text="Remover" press="onDelete" />
+                        </HBox>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </VBox>
+
+</mvc:View>
