@@ -9,7 +9,7 @@ import Event from "sap/ui/base/Event";
  */
 export default class View extends Controller {
 
-    private apiUrl: string = "http://localhost:5136/api/notaFiscal";
+    private apiUrl: string = "http://localhost:5136/api/notafiscal";
 
     public onInit(): void {
         this.loadNotas();

@@ -9,7 +9,7 @@
             <ToolbarSpacer id="toolbarSpacer" />
             <Button id="btnAdicionar" text="Adicionar" press="onAdd" />
         </Toolbar>
-        <Table id="notaFiscalTable" items="{path: '/notasFiscais'}">
+        <Table id="notaFiscalTable" items="{path: '/notasfiscal'}">
             <columns>
                 <Column id="colNumero"><Text id="txtColNumero" text="Número" /></Column>
                 <Column id="colValor"><Text id="txtColValor" text="Valor" /></Column>
